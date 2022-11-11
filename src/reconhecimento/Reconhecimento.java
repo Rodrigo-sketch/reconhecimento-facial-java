@@ -28,7 +28,7 @@ import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.OpenCVFrameConverter;
 import org.bytedeco.javacv.OpenCVFrameGrabber;
 
-public class Reconhecimento1 {
+public class Reconhecimento {
     public static void main(String args[]) throws FrameGrabber.Exception, InterruptedException {
         OpenCVFrameConverter.ToMat converteMat = new OpenCVFrameConverter.ToMat();
         OpenCVFrameGrabber camera = new OpenCVFrameGrabber(0);
@@ -51,6 +51,7 @@ public class Reconhecimento1 {
         String nome = ""; 
         boolean falhou = false;
         long start = System.currentTimeMillis();
+        long current = 0;
         long fim = 0;
         KeyEvent tecla = null;
         CanvasFrame cFrame = new CanvasFrame("Reconhecimento", CanvasFrame.getDefaultGamma() / camera.getGamma());
@@ -67,6 +68,8 @@ public class Reconhecimento1 {
                 tecla = cFrame.waitKey(2);
             }
             fim = System.currentTimeMillis()-start;
+            
+            
             if (facesDetectadas.size()==0 && fim >= 20000){
                 falhou = true;
             }
@@ -106,6 +109,10 @@ public class Reconhecimento1 {
                     System.out.println("Reconhecimento facial falhou! Acesso Negado!");
                 }
                 break;
+            }
+            if (current!=(10 - (fim / 1000) % 60)){
+                System.out.println("Segundos restantes:"+ (10 - (fim / 1000) % 60));
+                current = (10 - (fim / 1000) % 60);
             }
         }
         cFrame.dispose();
