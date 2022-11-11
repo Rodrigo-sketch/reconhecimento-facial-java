@@ -1,0 +1,7 @@
+id;nome;nivel
+1;Fabiamno;Nivel 1
+2;Rodrigo;Nivel 1
+3;June;Nivel 22
+4;Mirone;Nivel 22
+5;Amanda;Nivel 3
+6;Osmar;2
