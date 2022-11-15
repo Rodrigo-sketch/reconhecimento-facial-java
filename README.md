@@ -8,3 +8,13 @@ O Código foi desenvolvido para que pudesse ser armazenado em arquivo o conjunto
 1 - Detectar faces, por meio da classe Captura. Nessa classe o usuário formece as informações pessoais e são geradas as imagens.
 2 - Treinar. nessa etapa o EigenFaces gera o arquivo yml com as imagens coletadas e armazena as informações pessoais.
 3 - Reconhecer. nessa etapa a câmera faz o reconhecimento da imagem detectada e compara com as informações guardadas no arquivo yml gerado. Após um intervalo de tempo é informado se a imagem foi reconhecida ou não.
+
+https://github.com/Rodrigo-sketch/reconhecimento-facial-java/blob/main/etapas%20para%20o%20reconhecimento.png
+
+https://github.com/Rodrigo-sketch/reconhecimento-facial-java/blob/main/eexemplo-reconhecimento-facial.png
+
+https://github.com/Rodrigo-sketch/reconhecimento-facial-java/blob/main/eigenfaces.png
+
+https://github.com/Rodrigo-sketch/reconhecimento-facial-java/blob/main/Eigenvetor.png
+
+https://github.com/Rodrigo-sketch/reconhecimento-facial-java/blob/main/Eigenvetor2.png
