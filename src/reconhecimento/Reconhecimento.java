@@ -54,7 +54,7 @@ public class Reconhecimento {
         String nome = ""; 
         boolean falhou = false;
         long start = System.currentTimeMillis();
-        long current = 0;
+        long current = 11;
         long fim = 0;
         KeyEvent tecla = null;
         //abre a câmera para iniciar o reconhecimento
@@ -125,6 +125,11 @@ public class Reconhecimento {
             if (current!=(10 - (fim / 1000) % 60)){
                 System.out.println("Segundos restantes:"+ (10 - (fim / 1000) % 60));
                 current = (10 - (fim / 1000) % 60);
+            }
+            // se a contagem regressiva chegar a zero, o sistema informa que o reconhecimento facial falhou!
+            if (current == 0){
+                System.out.println("Reconhecimento facial falhou! Acesso Negado!");
+                break;
             }
         }
         cFrame.dispose();
