@@ -33,7 +33,7 @@ import org.bytedeco.opencv.opencv_objdetect.CascadeClassifier;
  * @author Rodrigo
  */
 
-public class Captura1 {
+public class Captura {
     public static void main(String arg[]) throws FrameGrabber.Exception, InterruptedException, IOException {
         KeyEvent tecla = null;
         // inicia as bibliotecas openCV
